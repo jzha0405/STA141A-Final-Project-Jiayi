@@ -6,6 +6,12 @@ output:
 date: "2026-03-16"
 ---
 
+Notes: Download link of datasets used in this report:
+NOAA Temperature and Precipitation datasets are available in this link: https://www.ncei.noaa.gov/data/nclimgrid-monthly/access/
+The temperature dataset is the nclimgrid_tavg.nc file, and the precipitation dataset is the nclimgrid_prcp.nc file.
+For the Kaggle "1.88 Million US Wildfires" dataset, the file is available in the github link or on this website https://www.kaggle.com/datasets/rtatman/188-million-us-wildfires/data
+
+
 # Abstract
 
 The project develops predictive models for the occurrence of major wildfires in the contiguous United States. The project uses the dataset "1.88 Million US Wildfires" from Kaggle, and defines a major wildfire as a fire larger than 300 acres. I organize the wildfire records into a county-month panel dataset and create a binary outcome to represent whether at least one major wildfire occurred in a given county during a given month. To improve the models' predictive performance, I introduced two climate variables monthly average temperature and monthly average precipitation from the NOAA NClimGrid dataset. I constructed and compared three prediction models, including logistic regression, random forest, and XGBoost. I divided the dataset from 1992 to 2010 as training set and data from 2011 to 2015 as the testing set. Model performance is evaluated using the Area Under the ROC Curve (AUC) and sensitivity (the proportion of actual major wildfires that are correctly predicted by the model) under the same cutoff. The XGBoost model shows the strongest predictive performance under both evaluation standards.
